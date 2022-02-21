@@ -43,7 +43,7 @@ class ChatBot(commands.Bot):
         print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + f" 🟢 Bot is online.")
 
     async def on_connect(self):
-        print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " 💬 Connected!")
+        print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " ⨁ Connected!")
 
     async def on_disconnect(self):
         print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " 🔴 Disconnected!")
