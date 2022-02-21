@@ -77,11 +77,11 @@ python chat-bot.py
 
 | Variable                  | What it is                                                            |
 | ------------------------- | ----------------------------------------------------------------------|
-| >info                        | To get the bot & channels info.
-| >help     | Show the available command and their usages.                                            |
-| >chat <channel_mention>    | Add the mentioned channel to chatting channel.                                            |
-| >train <channel_mention>        | Add the mentioned channel to training channel.
+| >info                        | Show bot & channels info.
+| >help     | Show available commands and their usages.                                            |
+| >chat <channel_mention>    | Add the mentioned channel to Chatting channel list.                                            |
+| >train <channel_mention>        | Add the mentioned channel to Training channel list.
 | >reset  | Reset the whole database.                                        |
 
 > Bot will start messaging in chat channel when user will send a message.
-> Make sure there are at least 30 messages in the traning channels.
+> Make sure there at least 30 messages sent in the traning channels.
