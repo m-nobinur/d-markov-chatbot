@@ -8,7 +8,7 @@ class Info(commands.Cog):
         prefix = self.bot.command_prefix
 
         self.help_msg = {
-            "chat": f"Usage:\n`{prefix}chat <channel mention>`\n\n*The bot need at least 30 messages to start chatting.*",
+            "chat": f"Usage:\n`{prefix}chat <channel mention>`\n\n*The bot need at least 30 messages to start messaging.*\n",
             "train": f"Usage:\n`{prefix}train <channel mention>`\n",
             "reset": "Reset the saved messages and the saved channels.",
             "info": "Show bot info.",

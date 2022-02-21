@@ -49,7 +49,7 @@ class Message(commands.Cog):
                     else:
                         msg = markov_model.generate_text(chain, 20)
                 else:
-                    await message.channel.send("Add more messages to the training channels.")
+                    await message.channel.send("Add at least 30 messages to the training channels.")
                     await self.bot.db.close_connection(conn, cur)
                     return
 
