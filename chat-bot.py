@@ -14,6 +14,8 @@ from datetime import datetime
 import disnake as discord
 from disnake.ext import commands
 
+from db import ChatDBManager
+
 
 # ======= Set up the bot =======
 BOT_TOKEN = ""
@@ -26,13 +28,19 @@ class ChatBot(commands.Bot):
         super().__init__(**kwargs)
         self.remove_command("help")
 
+        if not os.path.isdir("./data"):
+            os.makedirs("./data")
+
+        self.db = ChatDBManager("./data")
+
+        for cog in ["setup", "info", "message"]:
+            self.load_extension(f"cogs.{cog}")
+
     async def on_ready(self):
         await self.change_presence(
             activity=discord.Game(f"Start with {self.command_prefix}help")
         )
-        print(
-            datetime.now().strftime("%d/%m/%Y %H:%M:%S") + f" 🟢 Bot is online as {self.user}!"
-        )
+        print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + f" 🟢 Bot is online.")
 
     async def on_connect(self):
         print(datetime.now().strftime("%d/%m/%Y %H:%M:%S") + " 💬 Connected!")
