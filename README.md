@@ -4,9 +4,9 @@ A discord bot that generates and sends messages based on Markov Chain Model.
 
 ## Implementation
 
-- Implement **Markov Chain Model** to generate text messages.
-- Utilize **queue** data-structure to create Markov Chain.
-- Utilize **SQL async io operations** using *aiosqlite*.
+- Implemented **Markov Chain Model** to generate text messages.
+- Utilized **queue** data-structure to create Markov Chain.
+- Utilized **SQL async io operations** using *aiosqlite*.
 
 ---
 
